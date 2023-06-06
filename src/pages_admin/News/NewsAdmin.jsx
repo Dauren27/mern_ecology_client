@@ -6,7 +6,7 @@ import {
   useCreateMutation,
   useDeleteNewsMutation,
 } from "../../redux/reducers/newsApi";
-import { API_URL } from "../../http";
+import { API_URL, API_URL_TWO } from "../../http";
 
 const NewsAdmin = () => {
   const { data } = useGetNewsQuery();
@@ -75,10 +75,7 @@ const NewsAdmin = () => {
           {data &&
             data.map((item) => (
               <div className={cl.box}>
-                <img
-                  src={`https://mern-ecology-server.onrender.com/${item.picture}`}
-                  alt=""
-                />
+                <img src={`${API_URL_TWO}/${item.picture}`} alt="" />
                 <div className={cl.content}>
                   <h3>{item.date}</h3>
                   <h3 className={cl.title}>{item.title}</h3>

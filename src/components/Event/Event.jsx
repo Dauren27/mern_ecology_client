@@ -1,14 +1,14 @@
 import React from "react";
 import cl from "./Event.module.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { API_URL } from "../../http";
+import { API_URL, API_URL_TWO } from "../../http";
 
 const Event = ({ event }) => {
   const navigate = useNavigate();
   return (
     <div className={cl.box}>
       <img
-        src={`https://mern-ecology-server.onrender.com/${event.picture}`}
+        src={`${API_URL_TWO}/${event.picture}`}
         alt=""
       />
       <div className={cl.content}>

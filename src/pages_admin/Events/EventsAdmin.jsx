@@ -7,7 +7,7 @@ import {
   useGetEventsQuery,
   useLazyGetEventsQuery,
 } from "../../redux/reducers/eventApi";
-import { API_URL } from "../../http";
+import { API_URL, API_URL_TWO } from "../../http";
 
 const EventsAdmin = () => {
   const { data } = useGetEventsQuery();
@@ -91,10 +91,7 @@ const EventsAdmin = () => {
           {data &&
             data.map((item) => (
               <div className={cl.box}>
-                <img
-                  src={`https://mern-ecology-server.onrender.com/${item.picture}`}
-                  alt=""
-                />
+                <img src={`${API_URL_TWO}/${item.picture}`} alt="" />
                 <div className={cl.content}>
                   <h3>
                     {item.date} / {item.time}

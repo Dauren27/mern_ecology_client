@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cl from "./News.module.scss";
 import Layout from "../../Layout/Layout";
-import { $api, API_URL } from "../../http";
+import { $api, API_URL, API_URL_TWO } from "../../http";
 
 const News = () => {
   const [news, setNews] = useState(null);
@@ -26,10 +26,7 @@ const News = () => {
               {news ? (
                 news.map((item) => (
                   <div className={cl.box}>
-                    <img
-                      src={`https://mern-ecology-server.onrender.com/${item.picture}`}
-                      alt=""
-                    />
+                    <img src={`${API_URL_TWO}/${item.picture}`} alt="" />
                     <div className={cl.content}>
                       <h3>{item.title}</h3>
                       <p>{item.text}</p>
