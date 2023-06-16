@@ -104,6 +104,7 @@ html {
   color: var(--granite-gray);
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -227,71 +228,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/*-----------------------------------*\
-    #HERO
-  \*-----------------------------------*/
-.hero {
-  background-color: var(--eerie-black-1);
-  color: var(--white);
-  min-height: 600px;
-  padding-block: 120px 60px;
-  display: grid;
-  align-items: center;
-}
-
-.hero .section-subtitle {
-  --color: var(--white);
-  --ff: var(--ff-inter);
-  --fs: var(--fs-7);
-}
-
-.hero-title {
-  font-size: var(--fs-2);
-  margin-block: 30px;
-  line-height: 1.2;
-}
-
-.hero-text {
-  font-family: var(--ff-inter);
-  font-size: var(--fs-8);
-  letter-spacing: -1px;
-  max-width: 50ch;
-  margin-block-end: 30px;
-}
-
-/*-----------------------------------*\
-    #FEATURES
-  \*-----------------------------------*/
-.features {
-  padding-block-start: 0;
-  background-color: var(--eerie-black-1);
-}
-.features-list {
-  display: grid;
-  gap: 30px;
-}
-.features-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 25px;
-}
-.features-item .item-icon {
-  color: var(--pistachio);
-  font-size: 5.5rem;
-  margin-block-start: 10px;
-}
-.features-item .item-icon ion-icon {
-  --ionicon-stroke-width: 25px;
-}
-.features-item .item-title {
-  margin-block-end: 10px;
-}
-.features-item .item-text {
-  max-width: 25ch;
-  color: var(--white_50);
-  font-size: var(--fs-9);
 }
 
 /*-----------------------------------*\
@@ -506,9 +442,8 @@ body {
 }
 @media (min-width: 768px) {
   /**
-     * FEATURES, SERVICE
+     *  SERVICE
      */
-  .features-list,
   .service-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -533,19 +468,6 @@ body {
 @media (min-width: 992px) {
   :root {
     --fs-2: 7.5rem;
-  }
- .hero {
-    background-image: url("../public/images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    min-height: 780px;
-  }
-  .features {
-    padding-block-start: var(--section-padding);
-  }
-  .features-list {
-    grid-template-columns: repeat(4, 1fr);
   }
   /**
      * ABOUT
@@ -610,21 +532,6 @@ body {
   }
   .section-title {
     line-height: 1.2;
-  }
-  /**
-     * HERO
-     */
-  .hero {
-    padding-block: 200px 325px;
-    background-position: center;
-  }
-  /**
-     * FEATURES
-     */
-  .features {
-    padding-block-start: 0;
-    margin-block-start: -185px;
-    background-color: transparent;
   }
   /**
      * ABOUT

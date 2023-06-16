@@ -1,0 +1,99 @@
+.hero {
+  color: var(--white);
+  min-height: 600px;
+  padding-block: 120px 60px;
+  display: grid;
+  align-items: center;
+  background-image: url("../../../public/images/background2.jpg");
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  .section__subtitle {
+    --color: var(--white);
+    --ff: var(--ff-inter);
+    --fs: var(--fs-7);
+  }
+}
+
+.hero__title {
+  font-size: var(--fs-2);
+  margin-block: 30px;
+  line-height: 1.2;
+}
+
+.hero__text {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-8);
+  letter-spacing: -1px;
+  max-width: 50ch;
+  margin-block-end: 30px;
+}
+
+/*-----------------------------------*\
+    #FEATURES
+  \*-----------------------------------*/
+.features {
+  padding-block-start: 0;
+  background-color: var(--eerie-black-1);
+}
+.features__list {
+  display: grid;
+  gap: 30px;
+}
+.features__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+.features__item .item__icon {
+  color: var(--pistachio);
+  font-size: 5.5rem;
+  margin-block-start: 10px;
+}
+.features__item .item__icon ion-icon {
+  --ionicon-stroke-width: 25px;
+}
+.features__item .item__title {
+  margin-block-end: 10px;
+}
+.features__item .item__text {
+  max-width: 25ch;
+  color: var(--white_50);
+  font-size: var(--fs-9);
+}
+
+@media (min-width: 768px) {
+  .features__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    background-image: url("../../../public/images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    min-height: 780px;
+  }
+  .features {
+    padding-block-start: var(--section-padding);
+  }
+  .features__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    //padding-block: 200px 325px;
+    background-position: center;
+  }
+
+  //   .features {
+  //     padding-block-start: 0;
+  //     margin-block-start: -185px;
+  //     background-color: transparent;
+  //   }
+}

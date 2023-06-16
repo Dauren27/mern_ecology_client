@@ -1,36 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import cl from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
   const { isAuth } = useSelector((state) => state.auth);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className={cl.header}>
       <div className={`container ${cl.container}`}>
         <h1>
           <a className={cl.logo}>бишкек-эко</a>
         </h1>
-
-        {/* <select name="language" className={cl.langSwitch}>
-          <option value="russia">Русский</option>
-          <option value="english">English</option>
-          <option value="kyrgyz">Кыргызский</option>
-        </select> */}
-
         <button
           className={cl.navOpenBtn}
           aria-label="Open Menu"
-          data-nav-open-btn
+          onClick={() => setIsOpen(!isOpen)}
         >
           <ion-icon name="menu-outline"></ion-icon>
         </button>
 
-        <nav className={cl.navbar} data-navbar>
+        <nav className={`${cl.navbar} ${isOpen && cl.active}`} data-navbar>
           <button
             className={cl.navCloseBtn}
             aria-label="Close Menu"
-            data-nav-close-btn
+            onClick={() => setIsOpen(!isOpen)}
           >
             <ion-icon name="close-outline"></ion-icon>
           </button>

@@ -43,7 +43,7 @@ const EventIdPage = () => {
                 {/* <h3>
                 <span>Номер телефона:</span> +996 702 271 103
               </h3> */}
-                <button
+                {/* <button
                   href="#"
                   class="btn"
                   onClick={() => setIsRegistrated(true)}
@@ -52,7 +52,7 @@ const EventIdPage = () => {
                 </button>
                 {isRegistrated && (
                   <p className={cl.success}>Вы успешно записались на событие</p>
-                )}
+                )} */}
               </div>
             </div>
           ) : (
